@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=GFS+Neohellenic&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    #info-body{
+      background-color: #1D1D1D;
+    }
+    #icard-main {
+      height: 700px;
+      width: 900px;
+      background-color: rgb(24, 24, 24);
+      display: block;
+      overflow-y: hidden;
+      overflow: scroll;
+      margin: 100px 450px;
+      /* padding-bottom: 10px; */
+    }
+
+    #icard-main::-webkit-scrollbar {
+      width: 0em;
+    }
+
+    #icard-main::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+
+    #icard-img {
+      height: 99%;
+      width: 100%;
+      background-color: rgb(24, 24, 24);
+    }
+
+    .icard-cont {
+      height: 55%;
+      width: 100%;
+      background-color: rgb(24, 24, 24);
+      display: flex;
+
+    }
+
+    #icard-left {
+      height: 90%;
+      width: 55%;
+      background-color: rgb(24, 24, 24);
+      margin: auto;
+    }
+
+    #icard-right {
+      height: 90%;
+      width: 40%;
+      background-color: rgb(24, 24, 24);
+      margin: auto;
+      display: block;
+    }
+
+    .irc {
+      height: 20%;
+      width: 90%;
+      background-color: rgb(24, 24, 24);
+      margin-top: 5%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #icard-cont1 {
+      background-color: rgb(24, 24, 24);
+      height: 100%;
+    }
+
+    .description {
+      padding-top: 5%;
+      padding-left: 5%;
+      font-family: GFS Neohellenic;
+      color: #FFFFFF;
+      font-size: 14px;
+    }
+
+    .type {
+      font-family: GFS Neohellenic;
+      font-size: 15px;
+      color: rgb(185, 185, 185);
+    }
+
+    .agerating {
+
+      font-family: GFS Neohellenic;
+      color: #FFFFFF;
+      font-size: 14px;
+      background-color: rgb(36, 34, 34);
+      border-style: solid;
+      border-width: 1px;
+      border-color: #FFFFFF;
+      border-radius: 2px;
+    }
+
+    .theme {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-family: GFS Neohellenic;
+      color: #FFFFFF;
+      font-size: 16px;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    .icard-cont1 {
+      padding-top: 5%;
+      padding-left: 5%;
+      display: grid;
+      grid-template-columns: 30% 30% 30%;
+      grid-template-rows: 50% 50%;
+      gap: 20px 20px;
+    }
+
+    .thumbnail {
+      height: 100px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .search {
+      display: block;
+      width: 600px;
+      height: 30px;
+
+    }
+
+    .div {
+      width: 200px;
+      background-color: rgb(36, 34, 34);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02), 0 6px 20px 0 rgba(0, 0, 0, 0.02);
+    }
+
+
+    .channel-image {
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+      margin-top: 12px;
+    }
+
+    .text {
+      font-family: Arial;
+      margin-left: 5px;
+    }
+
+    .para {
+      color: white;
+      font-size: 12px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+      font-family: GFS Neohellenic;
+
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      row-gap: 40px;
+      column-gap: 15px;
+    }
+
+    .more {
+      color: #FFFFFF;
+      padding-left: 5%;
+      font-family: GFS Neohellenic;
+    }
+    #book-btn{
+      width: 100px;
+      height: 30px;
+      font-size: 23px;
+      color: #FFFFFF;
+      background-color: #E50914;
+      border-radius: 7px;
+      align-items: center;
+      justify-content: center;
+      margin-left: 100px;
+    }
+    #book-btn:hover{
+      cursor: pointer;
+      background-color: #8e030a;
+    }
+    #top-img {
+            position: absolute;
+            width: 100%;
+            height: 570px;
+            left: 0px;
+            top: 0px;
+            border-radius: 10px;
+            background-image: url(top_img.jpg);
+            background-size: cover;
+        }
+
+        #top-bar {
+            position: absolute;
+            width: 1728px;
+            height: 69px;
+            left: 0px;
+            top: 0px;
+
+            background: rgba(29, 29, 29, 0.6);
+        }
+
+        #logo {
+            position: absolute;
+            width: 215px;
+            height: 55px;
+            left: 84px;
+            top: 10px;
+
+            /* background: url(logo_new-removebg-preview.png); */
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+
+        #m-txt {
+            position: absolute;
+            width: 77px;
+            left: calc(50% - 77px/2 - 373.5px);
+            top: 25px;
+            bottom: 3833px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            height: 45px;
+
+            color: #FFFFFF;
+        }
+
+        #s-txt {
+            position: absolute;
+            width: 120px;
+            left: calc(50% - 77px/2 - 240.5px);
+            top: 25px;
+            bottom: 3833px;
+            height: 45px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+
+            color: #FFFFFF;
+        }
+
+        #e-txt {
+            position: absolute;
+            width: 77px;
+            left: calc(50% - 77px/2 - 107.5px);
+            top: 25px;
+            bottom: 3833px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            height: 45px;
+
+            color: #FFFFFF;
+        }
+
+        #a-txt {
+            position: absolute;
+            width: 86px;
+            left: 760px;
+            top: 25px;
+            bottom: 3833px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            height: 45px;
+
+            color: #FFFFFF;
+        }
+
+        #search {
+            position: absolute;
+            width: 259px;
+            height: 36px;
+            left: 1078px;
+            top: 19px;
+
+            background: rgba(71, 84, 163, 0.52);
+            border-radius: 10px;
+            border: none;
+
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        search:focus {
+            outline: none;
+        }
+
+        ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #D9D9D9;
+            margin-left: 5px;
+        }
+
+        #signin {
+            position: absolute;
+            width: 93px;
+            height: 36px;
+            left: 1503px;
+            top: 19px;
+
+            background: #4754A3;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #signin-txt {
+            position: absolute;
+            width: 58px;
+            height: 19px;
+            justify-content: center;
+            align-items: center;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 18px;
+            /* identical to box height */
+            display: flex;
+            margin-top: auto;
+            margin-left: auto;
+
+
+            color: #FFFFFF;
+        }
+  </style>
+</head>
+
+<body id ="info-body">
+  <div id="top-bar">
+    <div id="logo">
+        <img src="logo_new-removebg-preview.png" alt="logo" onclick="movieshomepage()">
+    </div>
+    <div class="top-text-cursor" id="m-txt" onclick="movieschangepage()">Movies</div>
+    <div class="top-text-cursor" id="s-txt" onclick="movieslistpage()">Shows & Events</div>
+    <div class="top-text-cursor" id="a-txt" onclick="activiteslistpage()">Activities</div>
+    <input type="text" id="search" placeholder="Search"></input>
+    <button id="signin" onclick="loadPage()">
+        <div id="signin-txt">Sign in</div>
+    </button>
+    <!-- <img src="top_img.jpg" alt="logo"> -->
+</div>
+  <div id="icard-main">
+    <div id="icard-img">
+      <iframe class="page-hero:before" width="100%" height="100%" autoplay
+        src="https://www.youtube.com/embed/g4Hbz2jLxvQ" title="Spiderman: Into the Spiderverse | Official Trailer | Netflix"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <div class="icard-cont">
+      <div id="icard-left">
+        <div style="margin-top:5%;margin-left:5%;display:grid;grid-template-columns: 10% 90%;">
+          <button class="agerating">U/A 13+</button>
+          <p class="theme">Crude humor , gore , language , mature themes , substances</p>
+        </div>
+        <div>
+          <p class="description" style="font-size: 20px;">After a traumatic year, a first-generation Indian-American
+            teenager wants to improve her status at school, but friends, family, and feelings don't make it easy on her.
+          </p>
+        </div>
+        <div id="book-btn" onclick="book()">
+          <p style="margin: auto; margin-left: 20px;">Book</p>
+        </div>
+
+      </div>
+      <div id="icard-right">
+        <div class="irc" id="irc1">
+          <p class="description"><span class="type">Starring : </span>Maitreyi Ramakrishnan,Poorna Jagannathan,Richa
+            Moorjani</p>
+
+        </div>
+        <div class="irc" id="irc2">
+          <p class="description"><span class="type">Genres : </span>TV Dramas,Teen TV Shows,TV Comedies</p>
+
+        </div>
+        <div class="irc" id="irc3">
+          <p class="description"><span class="type">This show is : </span>Quirky,Feel-Good</p>
+        </div>
+      </div>
+    </div>
+    <h1 class="more">More like this</h1>
+    <div class="icard-cont1" id="icard-cont1">
+      <div class="div">
+        <div style="background-color: rgb(185, 185, 185);">
+          <img class="thumbnail"
+            src="https://m.media-amazon.com/images/M/MV5BZjMwNDQ4NzMtOThmZi00NmMyLThkMWItMTA3MTg2YjdiZDRmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg">
+        </div>
+        <div class="grid">
+          <div class="text">
+            <p class="para" style="font-size: 20px;">
+              <strong>To all the Boys I have loved before</strong>
+            </p>
+            <p class="para">
+              When her secret love letters somehow get mailed to each of her five crushed, Lara jean finds her quiet
+              high school existence turned upside down.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="div">
+        <div style="background-color: rgb(185, 185, 185);">
+          <img class="thumbnail"
+            src="https://m.media-amazon.com/images/M/MV5BZjMwNDQ4NzMtOThmZi00NmMyLThkMWItMTA3MTg2YjdiZDRmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg">
+        </div>
+        <div class="grid">
+          <div class="text">
+            <p class="para" style="font-size: 20px;">
+              <strong>To all the Boys I have loved before</strong>
+            </p>
+            <p class="para">
+              When her secret love letters somehow get mailed to each of her five crushed, Lara jean finds her quiet
+              high school existence turned upside down.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="div">
+        <div style="background-color: rgb(185, 185, 185);">
+          <img class="thumbnail"
+            src="https://m.media-amazon.com/images/M/MV5BZjMwNDQ4NzMtOThmZi00NmMyLThkMWItMTA3MTg2YjdiZDRmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg">
+        </div>
+        <div class="grid">
+          <div class="text">
+            <p class="para" style="font-size: 20px;">
+              <strong>To all the Boys I have loved before</strong>
+            </p>
+            <p class="para">
+              When her secret love letters somehow get mailed to each of her five crushed, Lara jean finds her quiet
+              high school existence turned upside down.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="div">
+        <div style="background-color: rgb(185, 185, 185);">
+          <img class="thumbnail"
+            src="https://m.media-amazon.com/images/M/MV5BZjMwNDQ4NzMtOThmZi00NmMyLThkMWItMTA3MTg2YjdiZDRmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg">
+        </div>
+        <div class="grid">
+          <div class="text">
+            <p class="para" style="font-size: 20px;">
+              <strong>To all the Boys I have loved before</strong>
+            </p>
+            <p class="para">
+              When her secret love letters somehow get mailed to each of her five crushed, Lara jean finds her quiet
+              high school existence turned upside down.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="div">
+        <div style="background-color: rgb(185, 185, 185);">
+          <img class="thumbnail"
+            src="https://m.media-amazon.com/images/M/MV5BZjMwNDQ4NzMtOThmZi00NmMyLThkMWItMTA3MTg2YjdiZDRmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg">
+        </div>
+        <div class="grid">
+          <div class="text">
+            <p class="para" style="font-size: 20px;">
+              <strong>To all the Boys I have loved before</strong>
+            </p>
+            <p class="para">
+              When her secret love letters somehow get mailed to each of her five crushed, Lara jean finds her quiet
+              high school existence turned upside down.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="div">
+        <div style="background-color: rgb(185, 185, 185);">
+          <img class="thumbnail"
+            src="https://m.media-amazon.com/images/M/MV5BZjMwNDQ4NzMtOThmZi00NmMyLThkMWItMTA3MTg2YjdiZDRmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg">
+        </div>
+        <div class="grid">
+          <div class="text">
+            <p class="para" style="font-size: 20px;">
+              <strong>To all the Boys I have loved before</strong>
+            </p>
+            <p class="para">
+              When her secret love letters somehow get mailed to each of her five crushed, Lara jean finds her quiet
+              high school existence turned upside down.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</body>
+<script>
+  function book(){
+
+window.location = "movies-seat-index.html";
+}
+function movieslistpage(){
+
+window.location = "shows.html";
+}
+
+function activiteslistpage(){
+
+window.location = "activities.html";
+}
+
+function movieschangepage(){
+
+window.location = "movies-list.html";
+}
+function movieshomepage(){
+
+window.location = "movies.html";
+}
+function cardpopup(){
+
+window.location = "info-card-habibi.html";
+}
+</script>
+
+</html>

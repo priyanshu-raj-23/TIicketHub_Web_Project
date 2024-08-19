@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Montserrat:wght@300&family=Roboto:wght@500&display=swap"
+    rel="stylesheet">
+    <style>
+      body {margin:0;}
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #fefbf5;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: #111;
+      text-align: center;
+      padding: 10px 12px;
+      text-decoration: none;
+      margin-top:10px;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #0079FF;
+      border-radius:5px;
+      color:white;
+    
+    }
+
+    .active {
+      font-family: Montserrat;
+      
+    }
+
+    .logo{
+      height:45px;
+    }
+
+    * {
+        box-sizing: border-box
+    }
+
+    .signin{
+      float:right;
+      background-color:#FF0060;
+      margin-right:20px;
+      margin-top:10px;
+      margin-bottom:5px;
+      font-family: Montserrat;
+      border-radius: 5px;
+      
+    }
+
+    .thumbnail{
+        width:100%;
+        height:250px;
+        object-fit:cover;
+      }
+      .search{
+        display:block;
+        width:600px;
+        height:30px;
+        
+      }
+      .div{
+        width:100%;
+        height:200px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+      }
+      .grid{
+        display:grid;
+        grid-template-columns:1fr 0.7fr;
+      }        
+      
+      .channel-image{
+        height:40px;
+        width:40px;
+        border-radius:40px;
+        margin-top:12px;
+      }
+      .text{
+        font-family: Montserrat;
+        margin-left:20px;
+        font-size:20px;
+        margin-top:20px;
+      }
+      .para{
+        color:rgb(151, 149, 149);
+        font-size:20px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-family: Montserrat;
+      }
+      .video-grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        row-gap:40px;
+        column-gap:15px;
+        margin-left:50px;
+        margin-right:50px;
+      }
+      .video-grid3{
+        display:grid;
+        grid-template-columns: 2.8fr 1.2fr ;
+        row-gap:40px;
+        column-gap:15px;
+        margin-left:50px;
+        margin-right:50px;
+      }
+
+      .boarding-pass {
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .boarding-pass-header {
+      display:grid;
+        grid-template-columns: 80px 1fr  ;
+        row-gap:40px;
+        column-gap:3px;
+        margin-left:50px;
+        margin-right:50px;
+        font-family: Montserrat;
+      
+    }
+
+    .airline-logo {
+      height:50px;
+      width:50px;
+      border-radius:50px;
+      margin-bottom: 10px;
+    }
+
+    .boarding-pass-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      font-family: Montserrat;
+    }
+    .boarding-pass-info1 {
+        display:grid;
+        grid-template-columns: 30px 1fr  ;
+        row-gap:40px;
+        column-gap:3px;
+        margin-left:50px;
+        margin-right:50px;
+        font-family: Montserrat;
+    }
+
+    .boarding-pass-info .label {
+      color: #777;
+    }
+
+    .boarding-pass-info .value {
+      font-weight: bold;
+    }
+
+    .qr-code {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .qr-code img {
+      width: 100px;
+      height: 100px;
+    }
+
+
+      .div1{
+        width:100%;
+        height:100%;
+        
+      }
+
+      .video-grid1{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        row-gap:40px;
+        column-gap:15px;
+        margin-left:50px;
+        margin-right:50px;
+        
+      }
+
+      .airlines{
+      height:30px;
+      width:30px;
+      border-radius:80px;
+    } 
+    
+    .finish{
+      margin-left:30px;
+      padding-top:20px;
+      padding-bottom:20px;
+      font-family:Montserrat;
+      border-style:none;
+      background-color: #FF0060;
+      color:white;
+    }
+    .finish:hover{
+
+      background-color: #0079FF;
+      color:white;
+
+    }
+
+
+  
+
+    </style>
+
+  </head>
+  <body>
+    <ul>
+      <li><a class="active" href="#home"><img class="logo" src="flight-domain-logo.png" onclick="mainpageredir()"></a></li>
+      <li style="font-family: Montserrat;margin-right:20px;margin-top:5px;"><a href="#news">See other flights </a></li>
+      <li style="font-family: Montserrat;margin-right:20px;margin-top:5px;"><a href="#contact">Customer Service</a></li>
+      <li class="signin"><a  href="#about">Sign In</a></li>
+    </ul>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div>
+      <p style="padding-left:30px;font-family:Montserrat;font-size:30px;font-weight:bold;margin-top:50px;margin-bottom:50px;padding-top:20px;"><strong>Review Your Itinerary</strong></p>
+      <div class="video-grid3">
+        <div>
+          <div class="boarding-pass">
+            <div class="boarding-pass-header">
+              <img class="airline-logo" src="https://play-lh.googleusercontent.com/OhZSLjRDLvFLqtDp9bIgcvAweZIg5V5uIMI_7kOaS-9nPR043DUfoibkn1BgwG7Ai1U" alt="Airline Logo">
+              <p>DELHI &#8594; MUMBAI</p>
+            </div>
+            <br>
+        
+            <div class="video-grid">
+              <div class="div1">
+                <div class="boarding-pass-info">
+                  <span class="label">Flight:</span>
+                  <span class="value">6E 6047</span>
+                </div>
+        
+                <div class="boarding-pass-info">
+                  <span class="label">Departure:</span>
+                  <span class="value">Indira Gandhi International Airport</span>
+                </div>
+        
+                <div class="boarding-pass-info">
+                  <span class="label">Destination:</span>
+                  <span class="value">Chatrapati Sivaji Airport</span>
+                </div>
+        
+                <div class="boarding-pass-info">
+                  <span class="label">Departure Time:</span>
+                  <span class="value">10:00 AM</span>
+                </div>
+                <div class="boarding-pass-info">
+                  <span class="label">Arrival Time:</span>
+                  <span class="value">12:00 PM</span>
+                </div>
+        
+                <div class="boarding-pass-info">
+                  <span class="label">Preferred Seating:</span>
+                  <span class="value">Economy Class</span>
+                </div>
+              </div>
+        
+              <div class="div1">
+                <div class="boarding-pass-info1">
+                  <img class="airlines" src="https://img.freepik.com/premium-vector/wifi-symbol-icon-black-white_755164-9797.jpg?w=2000">
+                  <span class="value" style="padding-top:5px;">wifi</span>
+                </div>
+                <div class="boarding-pass-info1">
+                  <img class="airlines" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXCu-kAaShTrRKdOCgslVe_CQ886RtzaE8MA&usqp=CAU">
+                  <span class="value" style="padding-top:5px;">Food</span>
+                </div>
+        
+                <div class="boarding-pass-info1">
+                  <img class="airlines" src="data:image/jpeg;base64,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">
+                  <span class="value" style="padding-top:5px;">In seat power</span>
+                </div>
+                <div class="boarding-pass-info1">
+                  <img class="airlines" src="https://static.vecteezy.com/system/resources/previews/000/551/115/original/play-symbol-vector-icon.jpg">
+                  <span class="value" style="padding-top:5px;">On demand Video</span>
+                </div>
+        
+        
+              </div>
+            </div>
+            <br>
+        
+            <div class="video-grid1">
+              <div class="div1">
+                <div class="boarding-pass-info">
+                  <span class="value">Baggage</span>
+                  
+                </div>
+        
+                <div class="boarding-pass-info">
+                  <span class="value">DEL &#8594; JAI</span>
+                  
+                </div>
+        
+        
+              </div>
+        
+              <div class="div1">
+                <div class="boarding-pass-info">
+                  <span class="value">CHECK-IN</span>
+                </div>
+        
+                <div class="boarding-pass-info">
+                  <span class="value">15 kg(1 piece per pax)</span>
+                  
+                </div>
+        
+              </div>
+        
+              <div class="div1">
+                <div class="boarding-pass-info">
+                  <span class="value">CABIN</span>
+                </div>
+        
+                <div class="boarding-pass-info">
+                  <span class="value">7 kg(1 piece per pax)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);" >
+          <p class="text">
+            <strong>Fare Summary</strong>
+          </p>
+          <div class="grid">
+            <div class="text">
+              <p class="para">
+                Fare Type 
+              </p>
+            </div>
+            <div class="text">
+              <p style="color: green;">
+                <strong>Partially Refundable </strong>
+              </p>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="text">
+              <p class="para">
+                Base Fare 
+              </p>
+            </div>
+            <div class="text">
+              <p>
+                <strong>Rs. 3424  </strong>
+              </p>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="text">
+              <p class="para">
+                Taxes & Fees 
+              </p>
+            </div>
+            <div class="text">
+              <p>
+                <strong>Rs. 691</strong>
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div class="grid">
+            <div class="text">
+              <p class="para">
+                Total Fare
+              </p>
+            </div>
+            <div class="text">
+              <p style="color: orangered;">
+                <strong>Rs. 4115</strong>
+              </p>
+            </div>
+          </div>
+          <p class="text" style="font-size:10px;">
+            *Non-refundable charges 
+          </p>
+          
+          <div class="grid">
+            <button class="finish">
+              Finish Booking 
+            </button>
+          </div>
+          <br>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div>
+      <p style="padding-left:30px;font-family:Montserrat;font-size:30px;font-weight:bold;margin-top:50px;margin-bottom:50px;padding-top:20px;"><strong>Select Your Fare</strong></p>
+      <div class="video-grid">
+        <div class="div">
+          <div class="grid">
+            <div class="text">
+              <p>
+                <strong><input style="margin-right:10px;" type="checkbox">Standard Fare</strong>
+              </p>
+              <p class="para">
+                Date change fees:
+     
+              </p>
+              <p class="para" style="font-size:15px;">
+                Flight Rescheduling charges of Rs.546 apply
+              </p>
+            </div>
+            <div class="text">
+              <p>
+                <strong>Rs. 1,194 </strong>
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="div">
+          <div class="grid">
+            <div class="text">
+              <p>
+                <strong><input style="margin-right:10px;" type="checkbox">Flexifly</strong>
+              </p>
+              <p class="para">
+                Date change fees:
+     
+              </p>
+              <p class="para" style="font-size:15px;">
+                <s>Flight Rescheduling charges of Rs.546 apply</s>
+              </p>
+            </div>
+            <div class="text">
+              <p>
+                <strong>Rs. 1,264 </strong>
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="div">
+          <div class="grid">
+            <div class="text">
+              <p>
+                <strong><input style="margin-right:10px;" type="checkbox">EzCancel</strong>
+              </p>
+              <p class="para">
+                
+              </p>
+              <p class="para" style="font-size:15px;">
+                90% Refund, upto Rs.1000 , if canceled up to 10 hours before departure
+              </p>
+            </div>
+            <div class="text">
+              <p>
+                <strong>Rs. 1,392 </strong>
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div style="padding-left:30px;">
+      <img src="cookies.png">
+    </div>
+    <br>
+  </body>
+  <script>
+    function mainpageredir(){
+      window.location="main home page.html"
+    }
+  </script>
+</html>

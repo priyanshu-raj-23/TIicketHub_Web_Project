@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #top-bar {
+            position: absolute;
+            width: 1728px;
+            height: 69px;
+            left: 0px;
+            top: 0px;
+
+            background: rgb(23, 23, 23);
+        }
+
+        #logo {
+            position: absolute;
+            width: 215px;
+            height: 55px;
+            left: 84px;
+            top: 10px;
+
+            /* background: url(logo_new-removebg-preview.png); */
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+
+        #m-txt {
+            position: absolute;
+            width: 77px;
+            left: calc(50% - 77px/2 - 373.5px);
+            top: 25px;
+            bottom: 3833px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            height: 45px;
+
+            color: #FFFFFF;
+        }
+
+        #s-txt {
+            position: absolute;
+            width: 120px;
+            left: calc(50% - 77px/2 - 240.5px);
+            top: 25px;
+            bottom: 3833px;
+            height: 45px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+
+            color: #FFFFFF;
+        }
+
+        #e-txt {
+            position: absolute;
+            width: 77px;
+            left: calc(50% - 77px/2 - 107.5px);
+            top: 25px;
+            bottom: 3833px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            height: 45px;
+
+            color: #FFFFFF;
+        }
+
+        #a-txt {
+            position: absolute;
+            width: 86px;
+            left: 760px;
+            top: 25px;
+            bottom: 3833px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            height: 45px;
+
+            color: #FFFFFF;
+        }
+
+        #search {
+            position: absolute;
+            width: 259px;
+            height: 36px;
+            left: 1078px;
+            top: 19px;
+
+            background: rgba(71, 84, 163, 0.52);
+            border-radius: 10px;
+            border: none;
+
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        search:focus {
+            outline: none;
+        }
+
+        ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #D9D9D9;
+            margin-left: 5px;
+        }
+
+        #signin {
+            position: absolute;
+            width: 93px;
+            height: 36px;
+            left: 1503px;
+            top: 19px;
+
+            background: #4754A3;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #signin-txt {
+            position: absolute;
+            width: 58px;
+            height: 19px;
+            justify-content: center;
+            align-items: center;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 18px;
+            /* identical to box height */
+            display: flex;
+            margin-top: auto;
+            margin-left: auto;
+
+
+            color: #FFFFFF;
+        }
+
+        #ml-heading1 {
+            position: absolute;
+            width: 400px;
+            height: 58px;
+            left: 171px;
+            top: 41px;
+
+            font-family: 'Viga';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 59px;
+
+            color: #FFFFFF;
+        }
+
+        #ns-list1 {
+            position: absolute;
+            width: 1411px;
+            height: 419px;
+            left: 137px;
+            top: 115px;
+        }
+
+        .ns-img1 {
+            position: absolute;
+            width: 247px;
+            height: 419px;
+            left: 54px;
+            top: 0px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+        }
+
+        .ns-img2 {
+            position: absolute;
+            width: 247px;
+            height: 419px;
+            left: 327px;
+            top: 0px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+        }
+
+        .ns-img3 {
+            position: absolute;
+            width: 248px;
+            height: 419px;
+            left: 600px;
+            top: 0px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+        }
+
+        .ns-img4 {
+            position: absolute;
+            width: 248px;
+            height: 419px;
+            left: 874px;
+            top: 0px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+        }
+
+        .ns-img5 {
+            position: absolute;
+            width: 247px;
+            height: 419px;
+            left: 1148px;
+            top: 0px;
+
+            /* background: url(image.png), url(image.png), url(image.png); */
+            border-radius: 10px;
+        }
+        #ns{
+            width: fit-content;
+            height: fit-content;
+            top: 65px;
+            position: absolute;
+        }
+        #ns-list2{
+            position: absolute;
+            width: 1411px;
+            height: 419px;
+            left: 137px;
+            top: 550px;
+
+        }
+        #ns-list3{
+            position: absolute;
+            width: 1411px;
+            height: 419px;
+            left: 137px;
+            top: 990px;
+
+        }
+    </style>
+</head>
+
+<body style="background-color: #1D1D1D;">
+    <div id="top-bar">
+        <div id="logo">
+            <img src="logo_new-removebg-preview.png" alt="logo" onclick="movieshomepage()">
+        </div>
+        <div class="top-text-cursor" id="m-txt" onclick="movieschangepage()">Movies</div>
+            <div class="top-text-cursor" id="s-txt" onclick="movieslistpage()">Shows & Events</div>
+            <div class="top-text-cursor" id="a-txt" onclick="activiteslistpage()">Activities</div>
+        <input type="text" id="search" placeholder="Search"></input>
+        <button id="signin" onclick="loadPage()">
+            <div id="signin-txt">Sign in</div>
+        </button>
+        <!-- <img src="top_img.jpg" alt="logo"> -->
+    </div>
+    <div id="ns">
+        <div id="ml-heading1">Now Showing</div>
+        <div id="ns-list1">
+            <div class="ns-img1">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC41LzEwICAyMS4zSyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00347275-uzagmfsmyy-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="ns-img2">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OS4yLzEwICA3LjlLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00358164-sspcbkdhdj-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="ns-img3">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC44LzEwICA1OC4zSyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00122562-dgpxgaudlw-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="ns-img4">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC45LzEwICA0OS43SyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00310794-twvaltqvdc-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="ns-img5">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ni41LzEwICAyLjdLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00058086-lsmhrsphls-portrait.jpg"
+                    alt="logo">
+            </div>
+
+        </div>
+
+        <div id="ns-list2">
+            <div class="ns-img1">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC41LzEwICAyMS4zSyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00347275-uzagmfsmyy-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="ns-img2">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OS4yLzEwICA3LjlLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00358164-sspcbkdhdj-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="ns-img3">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC44LzEwICA1OC4zSyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00122562-dgpxgaudlw-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="ns-img4">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC45LzEwICA0OS43SyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00310794-twvaltqvdc-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="ns-img5">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ni41LzEwICAyLjdLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00058086-lsmhrsphls-portrait.jpg"
+                    alt="logo">
+            </div>
+
+        </div>
+        <div id="ns-list3">
+            <div class="ns-img1">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC41LzEwICAyMS4zSyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00347275-uzagmfsmyy-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="ns-img2">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OS4yLzEwICA3LjlLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00358164-sspcbkdhdj-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="ns-img3">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC44LzEwICA1OC4zSyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00122562-dgpxgaudlw-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="ns-img4">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC45LzEwICA0OS43SyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00310794-twvaltqvdc-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="ns-img5">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ni41LzEwICAyLjdLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00058086-lsmhrsphls-portrait.jpg"
+                    alt="logo">
+            </div>
+
+        </div>
+
+        
+    </div>
+
+</body>
+
+<script>
+    function movieslistpage(){
+
+window.location = "shows.html";
+}
+
+function activiteslistpage(){
+
+window.location = "activities.html";
+}
+
+function movieschangepage(){
+
+window.location = "movies-list.html";
+}
+
+function movieshomepage(){
+
+window.location = "movies.html";
+}
+
+function movieschangepage(){
+
+window.location = "movies-list.html";
+}
+</script>
+
+</html>

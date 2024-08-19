@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickethub-movies</title>
+    <script>
+        function loadPage() {
+
+            window.location = "login1.html";
+
+        }
+    </script>
+    <style>
+        #bdy {
+
+            width: 100%;
+            height: 2500px;
+
+            background: #1D1D1D;
+        }
+
+        #top-img {
+            position: absolute;
+            width: 100%;
+            height: 570px;
+            left: 0px;
+            top: 0px;
+            border-radius: 10px;
+            background-image: url(top_img.jpg);
+            background-size: cover;
+        }
+
+        #top-bar {
+            position: absolute;
+            width: 1728px;
+            height: 69px;
+            left: 0px;
+            top: 0px;
+
+            background: rgba(29, 29, 29, 0.6);
+        }
+
+        #logo {
+            position: absolute;
+            width: 215px;
+            height: 55px;
+            left: 84px;
+            top: 10px;
+
+            /* background: url(logo_new-removebg-preview.png); */
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+
+        #m-txt {
+            position: absolute;
+            width: 77px;
+            left: calc(50% - 77px/2 - 373.5px);
+            top: 25px;
+            bottom: 3833px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            height: 45px;
+
+            color: #FFFFFF;
+        }
+
+        #s-txt {
+            position: absolute;
+            width: 120px;
+            left: calc(50% - 77px/2 - 240.5px);
+            top: 25px;
+            bottom: 3833px;
+            height: 45px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+
+            color: #FFFFFF;
+        }
+
+        #e-txt {
+            position: absolute;
+            width: 77px;
+            left: calc(50% - 77px/2 - 107.5px);
+            top: 25px;
+            bottom: 3833px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            height: 45px;
+
+            color: #FFFFFF;
+        }
+
+        #a-txt {
+            position: absolute;
+            width: 86px;
+            left: 760px;
+            top: 25px;
+            bottom: 3833px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            height: 45px;
+
+            color: #FFFFFF;
+        }
+
+        #search {
+            position: absolute;
+            width: 259px;
+            height: 36px;
+            left: 1078px;
+            top: 19px;
+
+            background: rgba(71, 84, 163, 0.52);
+            border-radius: 10px;
+            border: none;
+
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        search:focus {
+            outline: none;
+        }
+
+        ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #D9D9D9;
+            margin-left: 5px;
+        }
+
+        #signin {
+            position: absolute;
+            width: 93px;
+            height: 36px;
+            left: 1503px;
+            top: 19px;
+
+            background: #4754A3;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #signin-txt {
+            position: absolute;
+            width: 58px;
+            height: 19px;
+            justify-content: center;
+            align-items: center;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 18px;
+            /* identical to box height */
+            display: flex;
+            margin-top: auto;
+            margin-left: auto;
+
+
+            color: #FFFFFF;
+        }
+
+        #cont1 {
+            position: absolute;
+            width: 100%;
+            height: 602px;
+            left: 0px;
+            top: 558px;
+        }
+
+        #heading1 {
+            position: absolute;
+            width: 400px;
+            height: 58px;
+            left: 171px;
+            top: 41px;
+
+            font-family: 'Viga';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 59px;
+
+            color: #FFFFFF;
+        }
+
+        #blockbusters-list {
+            position: absolute;
+            width: 1411px;
+            height: 419px;
+            left: 137px;
+            top: 115px;
+        }
+
+        #b-img1 {
+            position: absolute;
+            width: 247px;
+            height: 419px;
+            left: 54px;
+            top: 0px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+        }
+        .b-img-cursor{
+            cursor: pointer;
+        }
+
+        #b-img2 {
+            position: absolute;
+            width: 247px;
+            height: 419px;
+            left: 327px;
+            top: 0px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+        }
+
+        #b-img3 {
+            position: absolute;
+            width: 248px;
+            height: 419px;
+            left: 600px;
+            top: 0px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+        }
+
+        #b-img4 {
+            position: absolute;
+            width: 248px;
+            height: 419px;
+            left: 874px;
+            top: 0px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+        }
+
+        #b-img5 {
+            position: absolute;
+            width: 247px;
+            height: 419px;
+            left: 1148px;
+            top: 0px;
+
+            /* background: url(image.png), url(image.png), url(image.png); */
+            border-radius: 10px;
+        }
+
+        #cont2 {
+            position: absolute;
+            width: 100%;
+            height: 770px;
+            left: 0px;
+            top: 1143px;
+
+        }
+
+        #heading2 {
+            position: absolute;
+            width: 624px;
+            height: 58px;
+            left: 171px;
+            top: 58px;
+
+            font-family: 'Viga';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 59px;
+
+            color: #FFFFFF;
+
+        }
+
+        #heading3 {
+            position: absolute;
+            width: 154px;
+            height: 58px;
+            left: 1105px;
+            top: 58px;
+
+            font-family: 'Viga';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 59px;
+
+            color: #FFFFFF;
+
+        }
+
+        #cont3 {
+            position: absolute;
+            width: 100%;
+            height: 558px;
+            left: 0px;
+            top: 1913px;
+            /* border: 1px solid red; */
+        }
+
+        #heading4 {
+            position: absolute;
+            width: 400px;
+            height: 58px;
+            left: 171px;
+            top: 29px;
+            /* margin-bottom: 20px; */
+            font-family: 'Viga';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 59px;
+
+            color: #FFFFFF;
+        }
+
+        #cont4 {
+            position: absolute;
+            width: 100%;
+            height: 350px;
+            left: 0px;
+            top: 2471px;
+
+        }
+
+        #shortcut {
+            position: absolute;
+            width: 1474px;
+            height: 264px;
+            left: 154px;
+            top: 36px;
+            display: flex;
+        }
+
+        #shortcut-1 {
+            position: absolute;
+            width: 334px;
+            height: 264px;
+            left: 0px;
+            top: 0px;
+
+            background: #283C8C;
+            border-radius: 10px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        #shortcut-1-font {
+            position: absolute;
+            width: 228px;
+            height: 114px;
+            /* left: 53px;
+            top: 75px; */
+            left: 90px;
+
+            font-family: 'Quicksand';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 60px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #FFFFFF;
+
+        }
+
+        #shortcut-2 {
+            position: absolute;
+            width: 334px;
+            height: 264px;
+            left: 380px;
+            top: 0px;
+
+            background: #BD3CFA;
+            border-radius: 10px;
+        }
+
+        #shortcut-2-font {
+            position: absolute;
+            width: 228px;
+            height: 114px;
+            left: 90px;
+            top: 75px;
+
+            font-family: 'Quicksand';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 60px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #FFFFFF;
+
+
+        }
+
+        #shortcut-3 {
+            position: absolute;
+            width: 334px;
+            height: 264px;
+            left: 760px;
+            top: 0px;
+
+            background: #FFF281;
+            border-radius: 10px;
+        }
+
+        #shortcut-3-font {
+            position: absolute;
+            width: 253px;
+            height: 114px;
+            left: 50px;
+            top: 61px;
+
+            font-family: 'Quicksand';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 60px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #201F1F;
+
+        }
+
+        #shortcut-4 {
+            position: absolute;
+            width: 334px;
+            height: 264px;
+            left: 1140px;
+            top: 0px;
+
+            background: #F37979;
+            border-radius: 10px;
+        }
+
+        #shortcut-4-font {
+            position: absolute;
+            width: 256px;
+            height: 114px;
+            left: 60px;
+            top: 52px;
+
+            font-family: 'Quicksand';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 60px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #FFFFFF;
+
+        }
+
+        #cont5 {
+            position: absolute;
+            width: 100%;
+            height: 457px;
+            left: -3px;
+            top: 2821px;
+
+        }
+
+        #heading6 {
+            position: absolute;
+            width: 400px;
+            height: 58px;
+            left: 171px;
+            top: 18px;
+
+            font-family: 'Viga';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 59px;
+
+            color: #FFFFFF;
+        }
+
+        #comingsoon {
+            width: 1544px;
+            height: 348px;
+            margin-left: 200px;
+            margin-top: 90px;
+            display: flex;
+        }
+
+        #cs-img1 {
+            width: 461px;
+            height: 259px;
+            left: 70px;
+            top: 40px;
+            margin-right: 50px;
+
+            background: url(https://wallpapercave.com/dwp2x/wp10693654.jpg);
+            border-radius: 6px;
+        }
+
+        #cs-img2 {
+            width: 462.22px;
+            height: 260px;
+            left: 496px;
+            top: 40px;
+            margin-right: -30px;
+            background: url(image);
+            border-radius: 6px;
+        }
+
+        #cs-img3 {
+            width: 502px;
+            height: 260px;
+            left: 1004px;
+            top: 44px;
+
+            background: url(image);
+
+        }
+
+        /* ------------------------------------------- the new movies part -----------------------------------------*/
+
+        #tm {
+            position: absolute;
+            width: 1728px;
+            height: 770px;
+            left: 0px;
+            top: 0px;
+        }
+
+        #tmli {
+            position: absolute;
+            width: 888px;
+            height: 532px;
+            left: 187px;
+            top: 128px;
+
+
+        }
+
+        #tm1 {
+            position: absolute;
+            width: 350px;
+            height: 532px;
+            left: 4px;
+            top: 0px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #tm2 {
+            position: absolute;
+            width: 420px;
+            height: 236px;
+            left: 431px;
+            top: 5px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+        }
+
+        #tm3 {
+            position: absolute;
+            width: 420px;
+            height: 236px;
+            left: 431px;
+            top: 262px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+        }
+
+        #chart1 {
+            position: absolute;
+            width: 406px;
+            height: 100px;
+            left: 1095px;
+            top: 128px;
+
+            background: #D9D9D9;
+            border-radius: 10px;
+            background-image: url(https://i.pinimg.com/564x/a5/dd/88/a5dd8853490f99f4e553c77dd11aaf1f.jpg );
+            background-size: cover;
+        }
+
+        #chart1:hover .tm-body {
+            height: 100%;
+            cursor: pointer;
+
+        }
+
+        #chart2 {
+            position: absolute;
+            width: 406px;
+            height: 100px;
+            left: 1095px;
+            top: 236px;
+
+            background: #D9D9D9;
+            border-radius: 10px;
+            background-image: url(https://i.pinimg.com/564x/7b/ef/16/7bef168a12addd57edca44fe3d5e9780.jpg );
+            background-size: cover;
+        }
+
+        #chart2:hover .tm-body {
+            height: 100%;
+            cursor: pointer;
+
+        }
+
+        #chart3 {
+            position: absolute;
+            width: 406px;
+            height: 100px;
+            left: 1095px;
+            top: 344px;
+
+            background: #D9D9D9;
+            border-radius: 10px;
+            background-image: url(https://i.pinimg.com/564x/a2/d8/30/a2d830ad75f75d97f9d039166baf6c62.jpg );
+            background-size: cover;
+        }
+
+        #chart3:hover .tm-body {
+            height: 100%;
+            cursor: pointer;
+
+        }
+
+        #chart4 {
+            position: absolute;
+            width: 406px;
+            height: 100px;
+            left: 1095px;
+            top: 452px;
+
+            background: #D9D9D9;
+            border-radius: 10px;
+            background-image: url(https://i.pinimg.com/564x/b4/11/fd/b411fd4b992bf718fcc81607fd66bb91.jpg );
+            background-size: cover;
+        }
+
+        #chart4:hover .tm-body {
+            height: 100%;
+            cursor: pointer;
+
+        }
+
+        #chart5 {
+            position: absolute;
+            width: 406px;
+            height: 100px;
+            left: 1095px;
+            top: 560px;
+
+            background: #D9D9D9;
+            border-radius: 10px;
+            background-image: url(https://i.pinimg.com/564x/d2/0d/a8/d20da8686e841dc4ea3afd9af9b74279.jpg );
+            background-size: cover;
+        }
+
+        #chart5:hover .tm-body {
+            height: 100%;
+            cursor: pointer;
+
+        }
+
+        .tm-body {
+            width: 100%;
+            height: 0;
+            top: 0;
+            right: 0;
+            background: #1d1d1d77;
+            position: absolute;
+            backdrop-filter: blur(5px);
+            color: white;
+            display: block;
+            flex-direction: column;
+            justify-content: center;
+            /* right: -100%; */
+            transition: .5s;
+            overflow: hidden;
+            overflow-y: scroll;
+            border-radius: 10px;
+        }
+
+        .tm-body::-webkit-scrollbar {
+            width: 0em;
+        }
+
+        .tm-body::-webkit-scrollbar-thumb {
+            background-color: transparent;
+        }
+
+        #tm1:hover .tm-body {
+            height: 100%;
+            cursor: pointer;
+
+        }
+
+        #tm2:hover .tm-body {
+            height: 100%;
+            cursor: pointer;
+
+        }
+
+        #tm3:hover .tm-body {
+            height: 100%;
+            cursor: pointer;
+
+        }
+
+        .tm-title {
+            text-transform: uppercase;
+            font-size: 40px;
+            font-weight: 400px;
+            margin: 40px 08px;
+
+        }
+
+        .tm-sub-title {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 200px;
+            margin: 0px 08px;
+
+        }
+
+        .tm-info {
+            font-size: 16px;
+            line-height: 25px;
+            margin: 40px 08px;
+            font-weight: 300;
+        }
+
+        .tm-btn {
+            color: #1f3d47;
+            background: #8fabba;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-transform: capitalize;
+            border: none;
+            outline: none;
+            font-weight: 400;
+            cursor: pointer;
+            width: 120px;
+            margin: 0px 08px;
+
+        }
+
+        .tm-title-edit {
+            margin-top: 15px;
+            overflow-y: hidden;
+        }
+
+        .bottom {
+            width: 100vw;
+            padding-top: 5px;
+            padding-bottom: 20px;
+            margin: 0;
+            background-color: whitesmoke;
+            position: absolute;
+            /* bottom: 0;
+                left: 0;
+                right: 0; */
+            font-family: "open sans";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #rights {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            margin-left: -65px;
+        }
+
+        #socials {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0 3rem 0;
+        }
+
+        #socials-logo {
+            height: 28px;
+            width: 28px;
+        }
+
+        #h3-font {
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            line-height: 3rem;
+        }
+
+        #p-sl {
+            max-width: 500px;
+            margin: 5px auto;
+            line-height: 28px;
+            font-size: 14px;
+            text-transform: capitalize;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        .list {
+            display: inline-block;
+            margin: 0px 5px;
+        }
+        .conatinerofslides{
+        height: 439px;
+        width: 1411px;
+        /* border:1px solid black; */
+       }
+       .leftclick{
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        background-image: url(https://www.pngfind.com/pngs/m/517-5173378_arrow-left-gif-white-left-arrow-hd-png.png);
+        background-size: contain;
+       }
+       .slidescontent{
+        height: 99%;
+        width: 94%;
+        /* border:1px solid red; */
+        display: inline-block;
+       }
+       .rightclick{
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        background-image: url(https://www.pngfind.com/pngs/m/517-5173378_arrow-left-gif-white-left-arrow-hd-png.png);
+        background-size: contain;
+
+       }
+       #slidescontent-id1{
+        /* background-color: black; */
+       }
+       #slidescontent-id2{
+        /* background-color: rgb(152, 14, 14); */
+        display: none;
+       }
+       .slideimg{
+        /* border:1px solid yellow; */
+        height: 407px;
+        width: 247px;
+        display: inline-block;
+        margin-top: 18px;
+        margin-left: 15px;
+        background-color: aquamarine;
+       }
+       .slideimg:hover{
+        cursor: pointer;
+       }
+       .slide2img:hover{
+        cursor: pointer;
+       }
+       .slide2img{
+        /* border:1px solid green; */
+        height: 407px;
+        width: 247px;
+        display: inline-block;
+        margin-top: 18px;
+        margin-left: 15px;
+        background-color: bisque;
+       }
+       img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+    }
+    .lowerslidesbox{
+        /* border: 2px solid yellow; */
+        height: 450px;
+        margin-bottom: 100px;
+        width: 1400px;
+        margin-left: 140px;
+
+    }
+    .nowshowingupp{
+        border: 2px soliod blue;
+        height: 100px;
+        width: 600px;
+        color: white;
+        font-size: 50px;
+        margin-left: 200px;
+    }
+    .top-text-cursor:hover{
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body id="bdy">
+    <div id="top-img">
+        <div id="top-bar">
+            <div id="logo">
+                <img src="logo_new-removebg-preview.png" alt="logo" onclick="movieshomepage()">
+            </div>
+            <div class="top-text-cursor" id="m-txt" onclick="movieschangepage()">Movies</div>
+            <div class="top-text-cursor" id="s-txt" onclick="movieslistpage()">Shows & Events</div>
+            <div class="top-text-cursor" id="a-txt" onclick="activiteslistpage()">Activities</div>
+            <input type="text" id="search" placeholder="Search"></input>
+            <button id="signin" onclick="loadPage()">
+                <div id="signin-txt">Sign in</div>
+            </button>
+            <!-- <img src="top_img.jpg" alt="logo"> -->
+        </div>
+    </div>
+    <div id="cont1">
+        <div id="heading1">Blockbusters</div>
+        <div id="blockbusters-list">
+            <div class="b-img-cursor" onclick="cardpopup()" id="b-img1">
+                <img  src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC41LzEwICAyMS4zSyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00347275-uzagmfsmyy-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="b-img-cursor" onclick="cardpopup()" id="b-img2">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OS4yLzEwICA3LjlLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00358164-sspcbkdhdj-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="b-img-cursor" onclick="cardpopup()" id="b-img3">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC44LzEwICA1OC4zSyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00122562-dgpxgaudlw-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="b-img-cursor" onclick="cardpopup()" id="b-img4">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC45LzEwICA0OS43SyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00310794-twvaltqvdc-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="b-img-cursor" onclick="cardpopup()" id="b-img5">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ni41LzEwICAyLjdLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00058086-lsmhrsphls-portrait.jpg"
+                    alt="logo">
+            </div>
+
+        </div>
+
+    </div>
+    <div id="cont2">
+        <div id="heading2">TOP MOVIES THIS WEEK</div>
+        <div id="heading3">CHART</div>
+        <div id="tm">
+            <div id="tmli">
+                <div id="tm1">
+                    <img src="https://picfiles.alphacoders.com/421/thumb-421554.jpg">
+                    <div class="tm-body">
+                        <h1 class="tm-title">01 | Spiderman</h1>
+                        <p class="tm-sub-title">jndjeuihndei</p>
+                        <p class="tm-info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci. Ut
+                            tenetur enim odit consequatur harum quos perspiciatis nisi, ex voluptatum vel illo ratione
+                            minima modi architecto sit dicta odio.</p>
+                        <button onclick="book()"class="tm-btn">Book</button>
+                    </div>
+                    <div id="tm-txt1"></div>
+                </div>
+                <div id="tm2">
+                    <img src="https://wallpapercave.com/dwp2x/fWnWpHj.jpg">
+                    <div class="tm-body">
+                        <h1 class="tm-title">02 | Inception</h1>
+                        <p class="tm-sub-title">jndjeuihndei</p>
+                        <p class="tm-info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci. Ut
+                            tenetur enim odit consequatur harum quos perspiciatis nisi, ex voluptatum vel illo ratione
+                            minima modi architecto sit dicta odio.</p>
+                        <button onclick="book()" class="tm-btn">Book</button>
+                    </div>
+                    <div id="tm-txt2"></div>
+                </div>
+
+                <div id="tm3">
+                    <img src="top_img.jpg">
+                    <div class="tm-body">
+                        <h1 class="tm-title">03 | The Imitation game</h1>
+                        <p class="tm-sub-title">jndjeuihndei</p>
+                        <p class="tm-info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci. Ut
+                            tenetur enim odit consequatur harum quos perspiciatis nisi, ex voluptatum vel illo ratione
+                            minima modi architecto sit dicta odio.</p>
+                        <button onclick="book()" class="tm-btn">Book</button>
+                    </div>
+                    <div id="tm-txt3"></div>
+                </div>
+
+
+
+                <!-- <div id="tm3">
+                <img src="top_img.jpg">
+                <div id="tm-txt3"></div>
+            </div> -->
+            </div>
+            <div id="charts">
+                <div id="chart1" onclick="cardpopup()">
+                    <!-- <img src="https://i1.wp.com/attackongeek.com/wp-content/uploads/2018/12/shareImage.jpg?w=1262&ssl=1"> -->
+                    <div class="tm-body">
+                        <h1 class="tm-title tm-title-edit">01 | Spiderman</h1>
+                    </div>
+                </div>
+                <div id="chart2" onclick="cardpopup()">
+                    <!-- <img src="https://i1.wp.com/attackongeek.com/wp-content/uploads/2018/12/shareImage.jpg?w=1262&ssl=1"> -->
+                    <div class="tm-body">
+                        <h1 class="tm-title tm-title-edit">02 | Inception</h1>
+                    </div>
+                </div>
+                <div id="chart3" onclick="cardpopup()">
+                    <!-- <img src="https://i1.wp.com/attackongeek.com/wp-content/uploads/2018/12/shareImage.jpg?w=1262&ssl=1"> -->
+                    <div class="tm-body">
+                        <h1 class="tm-title tm-title-edit">03 | The Imitation game</h1>
+                    </div>
+                </div>
+                <div id="chart4" onclick="cardpopup()">
+                    <!-- <img src="https://i1.wp.com/attackongeek.com/wp-content/uploads/2018/12/shareImage.jpg?w=1262&ssl=1"> -->
+                    <div class="tm-body">
+                        <h1 class="tm-title tm-title-edit">04 | Kungfu Panda</h1>
+                    </div>
+                </div>
+                <div id="chart5" onclick="cardpopup()">
+                    <!-- <img src="https://i1.wp.com/attackongeek.com/wp-content/uploads/2018/12/shareImage.jpg?w=1262&ssl=1"> -->
+                    <div class="tm-body">
+                        <h1 class="tm-title tm-title-edit">05 | Barbie</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cont3">
+            <div class="nowshowingupp">NOW SHOWING</div>     
+            <div class="lowerslidesbox">
+
+                <div class="conatinerofslides">
+                    <div id="leftclick-id" onclick= "decreasing()"class="leftclick"></div>
+                    <div id="slidescontent-id1" class="slidescontent">
+                        <div class="slideimg" onclick="book()" id="img-slider1">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC41LzEwICAyMS4zSyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00347275-uzagmfsmyy-portrait.jpg"
+                            alt="logo">
+                        </div>
+                        <div class="slideimg" onclick="cardpopup()" id="img-slider2">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OS4yLzEwICA3LjlLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00358164-sspcbkdhdj-portrait.jpg"
+                            alt="logo">
+                        </div>
+                        <div class="slideimg" onclick="cardpopup()" id="img-slider3">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC44LzEwICA1OC4zSyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00122562-dgpxgaudlw-portrait.jpg"
+                            alt="logo">
+                        </div>
+                        <div class="slideimg" onclick="cardpopup()" id="img-slider4">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC45LzEwICA0OS43SyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00310794-twvaltqvdc-portrait.jpg"
+                            alt="logo">
+                        </div>
+                        <div class="slideimg" onclick="cardpopup()" id="img-slider5">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ni41LzEwICAyLjdLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00058086-lsmhrsphls-portrait.jpg"
+                            alt="logo">
+                        </div>
+                    </div>
+                    <div id="slidescontent-id2" class="slidescontent">
+                        <div class="slide2img" onclick="cardpopup()" id="img2-slider1">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:ote-ODUuNksgTGlrZXM%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00346319-kynaazzqef-portrait.jpg"
+                            alt="logo">
+                        </div>
+                        <div class="slide2img" onclick="cardpopup()" id="img2-slider2">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ny4yLzEwICAzLjlLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00360700-ruljftttld-portrait.jpg"
+                            alt="logo">
+                        </div>
+                        <div class="slide2img" onclick="cardpopup()" id="img2-slider3">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:ote-Ni4ySyBMaWtlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00128608-nqgqaexpdn-portrait.jpg"
+                            alt="logo">
+                        </div>
+                        <div class="slide2img" onclick="cardpopup()" id="img2-slider4">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ny43LzEwICA2LjlLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00360225-fpfevkmgxt-portrait.jpg"
+                            alt="logo">
+                        </div>
+                        <div class="slide2img" onclick="cardpopup()" id="img2-slider5">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:ote-MTUuNUsgTGlrZXM%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00357536-qnmyastkbm-portrait.jpg"
+                            alt="logo">
+                        </div>
+                    </div>
+                    <div id="rightclick-id" onclick= "increasing()"class="rightclick"></div>
+                </div>
+
+            </div>
+    </div>
+    <div id="cont4">
+        <div id="shortcut">
+            <div id="shortcut-1">
+                <div id="shortcut-1-font">Best of<br>IPL</div>
+            </div>
+            <div id="shortcut-2">
+                <div id="shortcut-2-font">Comedy<br>Shows</div>
+            </div>
+            <div id="shortcut-3">
+                <div id="shortcut-3-font">MUSIC &<br>Concerts</div>
+            </div>
+            <div id="shortcut-4">
+                <div id="shortcut-4-font">FUN<br>Activities</div>
+            </div>
+        </div>
+    </div>
+    <div id="cont5">
+        <div id="heading6">Coming Soon</div>
+        <div id="comingsoon">
+            <div id="cs-img1"><img src="https://wallpapercave.com/dwp2x/wp10693654.jpg"></div>
+            <div id="cs-img2"><img src="https://movies.universalpictures.com/media/04-opp-dm-mobile-banner-1080x745-pl-f01-050523-1-1-1-6458870c70c1d-1.jpg"></div>
+            <div id="cs-img3"><img src="https://dx35vtwkllhj9.cloudfront.net/universalstudios/super-mario-bros/images/gallery/posterimage2.jpg"></div>
+        </div>
+    </div>
+
+    <!-- <footer class="bottom">
+        <div id="rights">
+            <h3 id="h3-font"><img src="logo_new-removebg-preview.png" style="width: 150px; padding-left: 30px;"></h3> -->
+    <!---<img src="D:\Amrita\SEM 2\UID\Project\Screenshot 2023-03-12 212217.png" style="width: 200px;">
+            <p id="p-sl"></p> --->
+
+    <!-- </div>
+        <ul class="socials">
+            <li class ="list"><a><a href="https://www.instagram.com/" alt="instagram"><img src="87390.png"class="social-logo" style="width: 28px; height: 28px;"></a></li>
+            <li class ="list"><a><a href="https://www.twitter.com/" alt="instagram"><img src="618942-middle-removebg-preview.png" class="social-logo" style="width: 50px; margin-left: 10px;"></a></li>
+            <li class ="list"><a><a href="https://www.linkedin.com/" alt="instagram"><img src="png-transparent-linkedin-computer-icons-blog-logo-watercolor-butterfly-angle-text-rectangle-removebg-preview.png" class="social-logo" style="width: 50px;"></a></li>
+            <li class ="list"><a><a href="https://www.facebook.com/" alt="instagram"><img src="facebook-scalable-graphics-icon-facebook-logo-facebook-logo-png-clip-art-removebg-preview.png" class="social-logo" style="width: 60px; margin: 0 0 0 0;"></a></li>
+        </ul>
+        <p style="padding-top: 10px;">  copyright &copy 2023 Name | Designed by Priyanshu Vaibhav Samyuktha Vishal</p>
+    </footer> -->
+</body>
+
+<script>
+    var m=0;
+    const x = document.getElementById("slidescontent-id1");
+    const y = document.getElementById("slidescontent-id2");
+ function decreasing(){
+      x.style.display="inline-block";
+      y.style.display="none";
+}
+ function increasing(){
+    y.style.display="inline-block";
+    x.style.display="none";
+
+
+ }
+
+function book(){
+
+    window.location = "movies-seat-index.html";
+}
+
+function movieslistpage(){
+
+window.location = "shows.html";
+}
+
+function activiteslistpage(){
+
+window.location = "activities.html";
+}
+
+function movieschangepage(){
+
+window.location = "movies-list.html";
+}
+function movieshomepage(){
+
+window.location = "movies.html";
+}
+function cardpopup(){
+
+window.location = "info-card-habibi.html";
+}
+
+
+
+
+
+</script>
+</html>

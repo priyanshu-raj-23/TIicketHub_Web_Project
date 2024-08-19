@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plane</title>
+  <!-- <link rel="stylesheet" href="habibi-styleplane.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Montserrat:wght@300&family=Roboto:wght@500&display=swap"
+    rel="stylesheet">
+<style>
+body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fefbf5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #111;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+  margin-top:10px;
+}
+
+li a:hover:not(.active) {
+  background-color: #0079FF;
+  border-radius:5px;
+  color:white;
+ 
+}
+
+.active {
+  font-family: Montserrat;
+  
+}
+
+.logo{
+  height:45px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+.signin{
+  float:right;
+  background-color:#FF0060;
+  margin-right:20px;
+  margin-top:10px;
+  margin-bottom:5px;
+  font-family: Montserrat;
+  border-radius: 5px;
+  height: 40px;
+  width: 80px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  color: white;
+  
+}
+
+
+age-slideshow {
+  max-width: 100%;
+  height:200px;
+  position: relative;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+}
+
+.fade {
+  animation-duration: 5s;
+  
+}
+
+.im{
+  width:100%;
+  height:400px;
+  object-fit: cover;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.thumbnail{
+        width:100%;
+        height:250px;
+        object-fit:cover;
+      }
+      .search{
+        display:block;
+        width:600px;
+        height:30px;
+        
+      }
+      .div{
+        width:100%;
+        height:360px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+      }
+      .grid{
+        display:grid;
+        grid-template-columns:1fr 0.7fr;
+      }        
+      
+      .channel-image{
+        height:40px;
+        width:40px;
+        border-radius:40px;
+        margin-top:12px;
+      }
+      .text{
+        font-family:Arial;
+        margin-left:20px;
+        font-size:20px;
+        margin-top:20px;
+      }
+      .para{
+        color:rgb(151, 149, 149);
+        font-size:20px;
+        margin-top:5px;
+        margin-bottom:5px;
+      }
+      .video-grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        row-gap:40px;
+        column-gap:15px;
+        margin-left:50px;
+        margin-right:50px;
+      }
+  
+  #form{
+    background-color: #000;
+    height:700px;
+    width:700px;
+    margin:auto;
+    padding:20px;
+    opacity: 0.7;
+}
+#form h3{
+    border-bottom: 2px solid #3399ff;
+    width:210px;
+    padding: 5px;
+}
+::placeholder{
+    color:#fff
+}
+#input #input-group{
+    width:300px;
+    margin:5px;
+    height: 55px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff
+}
+#input2 #input-group{
+    width:195px;
+    margin:5px;
+    height: 55px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff;
+}
+#input3 #input-group{
+    margin-left: 50px;
+    height: 55px;
+}
+#input4 #input-group{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff;
+    height: 55px;
+}
+#input4 #input-group1{
+    width:615px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff;
+    height: 55px;
+}
+#input5 h3{
+    border-bottom: 2px solid #3399ff;
+    width:220px;
+    padding: 5px;
+}
+#input6 #input-group{
+    width:300px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff;
+    height: 55px;
+}
+#input6 #input-group1{
+    width:615px;
+    margin:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color:#fff;
+    height: 55px;
+}
+
+*{
+                margin: 0vh;
+                padding: 0vh;
+            }
+
+            .bottom{
+                width: 100vw;
+                padding-top: 5px;
+                padding-bottom: 20px;
+                margin: 0;
+                background-color: whitesmoke;
+                font-family: "open sans";
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+            }
+            #rights{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                margin-left: -65px;
+            }
+            #socials{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            #socials-logo{
+                height: 28px;
+                width: 28px;
+            }
+            #h3-font{
+                font-size: 1.8rem;
+                font-weight: 400;
+                text-transform: capitalize;
+                line-height: 3rem;
+            }
+            #p-sl{
+                max-width: 500px;
+                margin: 5px auto;
+                line-height: 28px;
+                font-size:  14px;
+                text-transform: capitalize;
+                text-align: center;
+                padding: 5px 0;
+            }
+            .list{
+                display:inline-block;
+                margin:0px 5px;
+            } 
+    .airlines{
+      height:80px;
+      width:80px;
+      border-radius:80px;
+    }        
+    .air-text{
+      margin-left:10px;
+      padding-top:20px;
+      font-family:Montserrat;
+      font-size:15px;
+      font-weight: 900;
+    }  
+
+</style>
+</head>
+
+<body style="background-color: #fffdfa;">
+<ul>
+  <li><a class="active" href="#home"><img class="logo" src="flight-domain-logo.png" onclick="mainpageredir()"></a></li>
+  <li style="font-family: Montserrat;margin-right:20px;margin-top:5px;"><a href="#container">Book a flight</a></li>
+  <li style="font-family: Montserrat;margin-right:20px;margin-top:5px;"><a href="#contact">Partner Airlines</a></li>
+  <li class="signin" onclick="loginpage()">Sign In</li>
+</ul>
+<br>
+<br>
+<br>
+<div class="image-slideshow">
+
+  <div class="image fade">
+  <img class="im" src="https://cdn.pixabay.com/photo/2018/02/25/21/34/temple-3181803_1280.jpg" alt="Mountain Top">
+  </div>
+    
+  <div class="image fade">
+  <img class="im" src="https://images.pexels.com/photos/417344/pexels-photo-417344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Palm Trees">
+  </div>
+    
+  <div class="image fade">
+  <img class="im" src="https://cdn.pixabay.com/photo/2017/03/05/00/34/panorama-2117310_1280.jpg" alt="Neon Sign">
+  </div>
+
+  <div class="image fade">
+    <img class="im" src="https://cdn.pixabay.com/photo/2017/03/29/15/18/tianjin-2185510_1280.jpg">
+  </div>
+
+  <div class="image fade">
+    <img class="im" src="https://cdn.pixabay.com/photo/2016/10/21/14/50/plouzane-1758197_1280.jpg">
+  </div>
+</div>
+<br>
+<br>
+<br>
+<div>
+  <p style="text-align:center;font-family:Montserrat;font-size:30px;font-weight:bold;margin-bottom:50px;">Book Cheap flights with TicketHub</p>
+</div>
+
+<br>
+
+<div class="video-grid">
+  <div class="div">
+    <div>
+      <img class="thumbnail" src="https://www.jaipurstuff.com/wp-content/uploads/2022/08/First-Time-Visitors-Guide-to-Jaipur.jpg">
+    </div>
+    <div class="grid">
+      <div class="text">
+        <p>
+          <strong>Jaipur</strong>
+        </p>
+        <p class="para">
+          DEL &#8594; JAI 
+        </p>
+      </div>
+      <div class="text">
+        <p>
+          <strong>from &#8360; 1437</strong>
+        </p>
+        <p class="para">
+          1st July 2023 
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="div">
+    <div>
+      <img class="thumbnail" src="https://assets-news.housing.com/news/wp-content/uploads/2022/07/28202325/GWALIOR-FEATURE-compressed.jpg">
+    </div>
+    <div class="grid">
+      <div class="text">
+        <p>
+          <strong>Gwalior</strong>
+        </p>
+        <p class="para">
+          DEL &#8594; GWA
+        </p>
+      </div>
+      <div class="text">
+        <p>
+          <strong>from &#8360; 1992</strong>
+        </p>
+        <p class="para">
+          1st July 2023 
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="div">
+    <div>
+      <img class="thumbnail" src="https://www.funcityboond.com/assets/images/5%20img.jpg">
+    </div>
+    <div class="grid">
+      <div class="text">
+        <p>
+          <strong>Bareilly</strong>
+        </p>
+        <p class="para">
+          DEL &#8594; BEK
+        </p>
+      </div>
+      <div class="text">
+        <p>
+          <strong>from &#8360; 2205</strong>
+        </p>
+        <p class="para">
+          1st July 2023 
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="div">
+    <div>
+      <img class="thumbnail" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/b5/28/7c/chhota-imambara.jpg?w=700&h=-1&s=1">
+    </div>
+    <div class="grid">
+      <div class="text">
+        <p>
+          <strong>Lucknow</strong>
+        </p>
+        <p class="para">
+          DEL &#8594; LKO
+        </p>
+      </div>
+      <div class="text">
+        <p>
+          <strong>from &#8360; 2595</strong>
+        </p>
+        <p class="para">
+          1st July 2023 
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="div">
+    <div>
+      <img class="thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Sheth_Hutheesinh_Temple.jpg/1200px-Sheth_Hutheesinh_Temple.jpg">
+    </div>
+    <div class="grid">
+      <div class="text">
+        <p>
+          <strong>Ahmedabad</strong>
+        </p>
+        <p class="para">
+          DEL &#8594; AMD
+        </p>
+      </div>
+      <div class="text">
+        <p>
+          <strong>from &#8360; 3595</strong>
+        </p>
+        <p class="para">
+          1st July 2023 
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="div">
+    <div>
+      <img class="thumbnail" src="data:image/jpeg;base64,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">
+    </div>
+    <div class="grid">
+      <div class="text">
+        <p>
+          <strong>Amritsar</strong>
+        </p>
+        <p class="para">
+          DEL &#8594; ATQ
+        </p>
+      </div>
+      <div class="text">
+        <p>
+          <strong>from &#8360; 3595</strong>
+        </p>
+        <p class="para">
+          1st July 2023 
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<br>
+
+<div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);">
+  <p style="text-align:center;font-family:Montserrat;font-size:30px;font-weight:bold;margin-top:50px;margin-bottom:50px;padding-top:50px;"><strong>Popular Airlines to choose from</strong></p>
+  <div style="display:flex;justify-content:space-evenly;padding-bottom:25px;">
+    <div>
+      <img class="airlines" src="https://play-lh.googleusercontent.com/OhZSLjRDLvFLqtDp9bIgcvAweZIg5V5uIMI_7kOaS-9nPR043DUfoibkn1BgwG7Ai1U">
+      <br>
+      <a class="air-text">Indigo</a>
+    </div>
+    <div>
+      <img class="airlines" src="https://www.passionateinmarketing.com/wp-content/uploads/2022/10/air-india-logo-1024x836-1.png">
+      <br>
+      <a class="air-text">Air India </a>
+    </div>
+
+    <div>
+      <img class="airlines" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/AirAsia_New_Logo.svg/1200px-AirAsia_New_Logo.svg.png">
+      <br>
+      <a class="air-text">Air Asia </a>
+    </div>
+    <div>
+      <img class="airlines" src="https://static.businessworld.in/article/article_extra_large_image/1675380752_9W6am8_Akasa_Air.jpg">
+      <br>
+      <a class="air-text">Akasa Air</a>
+    </div>
+    <div>
+      <img class="airlines" src="https://pbs.twimg.com/media/B3B6A-7CUAAjarl.jpg"> 
+      <br>
+      <a class="air-text">Vistara</a>
+    </div>
+    <div>
+      <img class="airlines" src="data:image/png;base64,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"> 
+      <br>
+      <a class="air-text">Spicejet</a>
+    </div>
+
+  </div>
+</div>
+<br>
+
+<div class="container"><!--container-->
+
+  <form class="form-group"><!--form-->
+      <h1 style="text-align:center;font-family:Montserrat;font-size:30px;font-weight:bold;margin-top:50px;margin-bottom:50px;">Airline Booking Form</h1>
+
+      <div id="form"><!--form-->
+          <h3 class="text-white">Booking Details</h3>
+
+      <div id="input"><!--input-->
+          <input type="text" id="input-group" placeholder="From">
+          <input type="text" id="input-group" placeholder="To">
+          <input type="text" id="input-group" placeholder="Departure Date">
+          <input type="text" id="input-group" placeholder="Departure Time">
+          <select  id="input-group" style="background: black;">
+              <option value="">Preffered Airline</option>
+              <option value="">IndoGo</option>
+              <option value="">AirIndia</option>
+              <option value="">SpaceJet</option>
+          </select>
+          <select  id="input-group" style="background: black;">
+              <option value="">Prefered Seating</option>
+              <option value="">Economy Class</option>
+              <option value="">Business Class</option>
+              <option value="">First Class</option>
+          </select>
+          </div><!--input-->
+
+          <div id="input2"><!--input2-->
+              <input type="number" id="input-group" placeholder="Adult">
+              <input type="number" id="input-group" placeholder="Children(2-11years)">
+              <input type="number" id="input-group" placeholder="infant(under 2years)">
+          </div><!--input2-->
+
+          
+
+          <div id="input4"><!--input4-->
+              <input type="date" id="input-group" placeholder="Return Date">
+              <input type="date" id="input-group" placeholder="Return time">
+          </div><!--input4-->
+
+          <div id="input5"><!--input5-->
+              <h3 class="text-white">Personal Details</h3>
+          </div><!--input5-->
+
+          <div id="input6"><!--input6-->
+              <input type="text" id="input-group" placeholder="Full Name">
+              <input type="tel" id="input-group" placeholder="Phone Number">
+              <input type="email" id="input-group1" placeholder="Email">
+          </div><!--input6-->
+          <div style="border-style:none;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;margin-top:10px;background-color: #509AD3;color:black;" onclick="flightbookdomain()">Search Flights</div>
+      </div><!--form-->
+
+  </form><!--form-->
+
+</div><!--container-->
+
+<br>
+
+
+
+<!----
+  <footer class="bottom">
+    <div id="rights">
+        <h3 id="h3-font"><img src="logo_new-removebg-preview.png" style="width: 150px; padding-left: 30px;"></h3>
+            <img src="D:\Amrita\SEM 2\UID\Project\Screenshot 2023-03-12 212217.png" style="width: 200px;">
+        <p id="p-sl"></p> 
+  
+    </div>
+    <ul class="socials">
+        <li class ="list"><a><a href="https://www.instagram.com/" alt="instagram"><img src="87390.png"class="social-logo" style="width: 28px; height: 28px;"></a></li>
+        <li class ="list"><a><a href="https://www.twitter.com/" alt="instagram"><img src="618942-middle-removebg-preview.png" class="social-logo" style="width: 50px; margin-left: 10px;"></a></li>
+        <li class ="list"><a><a href="https://www.linkedin.com/" alt="instagram"><img src="png-transparent-linkedin-computer-icons-blog-logo-watercolor-butterfly-angle-text-rectangle-removebg-preview.png" class="social-logo" style="width: 50px;"></a></li>
+        <li class ="list"><a><a href="https://www.facebook.com/" alt="instagram"><img src="facebook-scalable-graphics-icon-facebook-logo-facebook-logo-png-clip-art-removebg-preview.png" class="social-logo" style="width: 60px; margin: 0 0 0 0;"></a></li>
+    </ul>
+    <p style="padding-top: 10px;">  copyright &copy 2023 Name | Designed by Priyanshu Vaibhav Samyuktha Vishal</p>
+  </footer>
+
+-->
+
+
+<script>
+  let index = 0;
+  displayImages();
+  function displayImages() {
+    let i;
+    const images = document.getElementsByClassName("image");
+    for (i = 0; i < images.length; i++) {
+      images[i].style.display = "none";
+    }
+    index++;
+    if (index > images.length) {
+      index = 1;
+    }
+    images[index-1].style.display = "block";
+    setTimeout(displayImages, 2000); 
+  }
+  function loginpage(){
+    window.location="final login.html"
+  }
+  function flightbookdomain(){
+    window.location="fight-domain-booking.html"
+  }
+  function mainpageredir(){
+      window.location="main home page.html"
+    }
+</script>
+
+</body>
+</html>
+
+

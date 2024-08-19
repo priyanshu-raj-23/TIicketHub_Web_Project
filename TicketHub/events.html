@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #top-bar {
+            position: absolute;
+            width: 1728px;
+            height: 69px;
+            left: 0px;
+            top: 0px;
+
+            background: rgb(23, 23, 23);
+        }
+
+        #logo {
+            position: absolute;
+            width: 215px;
+            height: 55px;
+            left: 84px;
+            top: 10px;
+
+            /* background: url(logo_new-removebg-preview.png); */
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+
+        #m-txt {
+            position: absolute;
+            width: 77px;
+            left: calc(50% - 77px/2 - 373.5px);
+            top: 25px;
+            bottom: 3833px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+
+            color: #FFFFFF;
+        }
+
+        #s-txt {
+            position: absolute;
+            width: 77px;
+            left: calc(50% - 77px/2 - 240.5px);
+            top: 25px;
+            bottom: 3833px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+
+            color: #FFFFFF;
+        }
+
+        #e-txt {
+            position: absolute;
+            width: 77px;
+            left: calc(50% - 77px/2 - 107.5px);
+            top: 25px;
+            bottom: 3833px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+
+            color: #FFFFFF;
+        }
+
+        #a-txt {
+            position: absolute;
+            width: 86px;
+            left: calc(50% - 86px/2 + 30px);
+            top: 25px;
+            bottom: 3833px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+
+            color: #FFFFFF;
+        }
+
+        #search {
+            position: absolute;
+            width: 259px;
+            height: 36px;
+            left: 1078px;
+            top: 19px;
+
+            background: rgba(71, 84, 163, 0.52);
+            border-radius: 10px;
+            border: none;
+
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        search:focus {
+            outline: none;
+        }
+
+        ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #D9D9D9;
+            margin-left: 5px;
+        }
+
+        #signin {
+            position: absolute;
+            width: 93px;
+            height: 36px;
+            left: 1503px;
+            top: 19px;
+
+            background: #4754A3;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #signin-txt {
+            position: absolute;
+            width: 58px;
+            height: 19px;
+            justify-content: center;
+            align-items: center;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 18px;
+            /* identical to box height */
+            display: flex;
+            margin-top: auto;
+            margin-left: auto;
+
+
+            color: #FFFFFF;
+        }
+
+        #el-heading1 {
+            position: absolute;
+            width: 400px;
+            height: 58px;
+            left: 171px;
+            top: 41px;
+
+            font-family: 'Viga';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 59px;
+
+            color: #FFFFFF;
+        }
+
+        #e-list1 {
+            position: absolute;
+            width: 1411px;
+            height: 419px;
+            left: 137px;
+            top: 115px;
+        }
+
+        .e-img1 {
+            position: absolute;
+            width: 247px;
+            height: 419px;
+            left: 54px;
+            top: 0px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+        }
+
+        .e-img2 {
+            position: absolute;
+            width: 247px;
+            height: 419px;
+            left: 327px;
+            top: 0px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+        }
+
+        .e-img3 {
+            position: absolute;
+            width: 248px;
+            height: 419px;
+            left: 600px;
+            top: 0px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+        }
+
+        .e-img4 {
+            position: absolute;
+            width: 248px;
+            height: 419px;
+            left: 874px;
+            top: 0px;
+
+            /* background: url(image.png); */
+            border-radius: 10px;
+        }
+
+        .e-img5 {
+            position: absolute;
+            width: 247px;
+            height: 419px;
+            left: 1148px;
+            top: 0px;
+
+            /* background: url(image.png), url(image.png), url(image.png); */
+            border-radius: 10px;
+        }
+        #events{
+            width: fit-content;
+            height: fit-content;
+            top: 65px;
+            position: absolute;
+        }
+        #e-list2{
+            position: absolute;
+            width: 1411px;
+            height: 419px;
+            left: 137px;
+            top: 550px;
+
+        }
+        #e-list3{
+            position: absolute;
+            width: 1411px;
+            height: 419px;
+            left: 137px;
+            top: 990px;
+
+        }
+    </style>
+</head>
+
+<body style="background-color: #1D1D1D;">
+    <div id="top-bar">
+        <div id="logo">
+            <img src="logo_new-removebg-preview.png" alt="logo">
+        </div>
+        <div id="m-txt">Movies</div>
+        <div id="s-txt">Shows</div>
+        <div id="e-txt">Events</div>
+        <div id="a-txt">Activities</div>
+        <input type="text" id="search" placeholder="Search"></input>
+        <button id="signin" onclick="loadPage()">
+            <div id="signin-txt">Sign in</div>
+        </button>
+        <!-- <img src="top_img.jpg" alt="logo"> -->
+    </div>
+    <div id="events">
+        <div id="el-heading1">Upcoming Shows</div>
+        <div id="e-list1">
+            <div class="e-img1">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAzMCBKdW4%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00360457-namzjkltxu-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="e-img2">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAyIEp1bA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00358075-uwpbgjrlln-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="e-img3">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAxMCBKdW4%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00355770-xpnqnpspxq-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="e-img4">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAxNiBKdWw%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00360791-abzwurtwya-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="e-img5">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAxNyBKdW4%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00357779-rudbpzazrj-portrait.jpg"
+                    alt="logo">
+            </div>
+
+        </div>
+
+        <div id="e-list2">
+            <div class="e-img1">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAxNyBKdW4%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00361113-amnjbsykyf-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="e-img2">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAxNyBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00351918-rluwcghrfx-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="e-img3">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-VGh1LCAyOCBEZWM%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00358308-zrmfaegznm-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="e-img4">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-TW9uLCAxMiBKdW4gb253YXJkcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00334520-uesyqhraga-portrait.jpg"
+                    alt="logo">
+            </div>
+            <div class="e-img5">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAxNiBKdW4%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00359839-ltpzckpjcc-portrait.jpg"
+                    alt="logo">
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
